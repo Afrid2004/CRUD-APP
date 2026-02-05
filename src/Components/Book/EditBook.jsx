@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router'
 import { editbook } from '../../Features/BookSlice';
+import PageTitle from '../Helmet';
 
 const EditBook = () => {
   const location = useLocation();
@@ -19,6 +20,7 @@ const EditBook = () => {
 
   return (
       <div>
+        <PageTitle title='Edit Book' />
         <h1>Edit book</h1>
         <form onSubmit={handleSubmit}>
           <div>
