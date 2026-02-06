@@ -14,10 +14,10 @@ const BookView = () => {
   }
 
   return (
-    <div>
+    <div className='container'>
       <PageTitle title="View Book" />
-      <h1>Book View Page</h1>
-          <div>
+      <h1 className='text-center mb-3'>Book View Page</h1>
+          <div className='d-flex justify-center'>
             <table>
               <thead>
                 <tr>
@@ -33,11 +33,11 @@ const BookView = () => {
                     <tr key={id}>
                       <td>{bookName}</td>
                       <td>{bookAuthor}</td>
-                      <td className='d-flex gap-2 flex-wrap'>
+                      <td className='d-flex gap-3 flex-wrap'>
                         <Link to='/edit-book' state={{id, bookName, bookAuthor}}>
                           <button className="btn">Edit Book</button>
                         </Link>
-                        <button onClick={() => {handleDelete(id)}} className="btn">Delete Book</button>
+                        <button onClick={() => {handleDelete(id)}} className="btn-alert">Delete Book</button>
                       </td>
                     </tr>
                   )

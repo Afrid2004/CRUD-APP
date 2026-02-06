@@ -6,6 +6,7 @@ import Navbar from '../Layouts/Navbar'
 import BookView from '../Components/Book/BookView'
 import AddBook from '../Components/Book/AddBook'
 import EditBook from '../Components/Book/EditBook'
+import Footer from '../Layouts/Footer'
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
         <Route path='/edit-book' element={<EditBook />} />
         <Route path='*' element={<ErrorPage />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }

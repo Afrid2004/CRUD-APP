@@ -20,25 +20,33 @@ const AddBook = () => {
   }
 
   return (
-    <>
+    <div className='container'>
       <PageTitle title="Add Book" />
       <div>
-        <h1>Add book</h1>
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="bookname">Book Name</label>
-            <input onChange={(e) => {setBookName(e.target.value)}} value={bookName} type="text" name='bookname' id='bookname' placeholder='Enter A Book Name' required />
-          </div>
-          <div>
-            <label htmlFor="authorname">Author Name</label>
-            <input onChange={(e) => {setBookAuthor(e.target.value)}} value={bookAuthor} type="text" name='authorname' id='authorname' placeholder='Enter Author Name' required />
-          </div>
-          <button type='submit' className="btn">
-            Add Book
-          </button>
-        </form>
+        <h1 className='text-center mb-3'>Add book</h1>
+        <div className="d-flex justify-center">
+          <form onSubmit={handleSubmit}>
+            <div className='mb-3'>
+              <label htmlFor="bookname" className='inputlabel'>
+                <i class="fi fi-rr-book-alt"></i>
+                <p>Book Name</p>
+              </label>
+              <input onChange={(e) => {setBookName(e.target.value)}} value={bookName} type="text" name='bookname' id='bookname' placeholder='Enter A Book Name' required />
+            </div>
+            <div className='mb-3'>
+              <label htmlFor="authorname" className='inputlabel'>
+                <i class="fi fi-rr-user-writer"></i>
+                <p>Author Name</p>
+              </label>
+              <input onChange={(e) => {setBookAuthor(e.target.value)}} value={bookAuthor} type="text" name='authorname' id='authorname' placeholder='Enter Author Name' required />
+            </div>
+            <button type='submit' className="btn">
+              Add Book
+            </button>
+          </form>
+        </div>
       </div>
-    </>
+    </div>
   )
 }
 
