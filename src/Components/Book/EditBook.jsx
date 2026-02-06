@@ -14,6 +14,7 @@ const EditBook = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if(!bookName.trim() || !bookAuthor.trim()) return;
     dispatch(editbook({id, bookName, bookAuthor}));
     Navigate('/view-book', {replace : true});
   }
